@@ -15,7 +15,7 @@ public abstract class DAO {
 	
 	protected void conectarDb() {
 		try {
-			if(conn==null) {
+			if(conn==null || conn.isClosed()) {
 				
 				Class.forName("com.mysql.jdbc.Driver");
 				String stringConection="jdbc:mysql://localhost:3306/personadb";
@@ -64,14 +64,15 @@ public abstract class DAO {
 	}
 	protected void close() {		
 		try {
-			if(conn!=null) {
-				conn.close();
-			}
+			
 			if(stmt!=null) {
 				stmt.close();
 			}
 			if(resultSet!=null) {
 				resultSet.close();
+			}
+			if(conn!=null) {
+				conn.close();
 			}
 		} catch (SQLException e) {
 			System.out.print("Error Cerrando"+e.getMessage());
