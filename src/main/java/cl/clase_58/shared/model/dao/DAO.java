@@ -63,6 +63,7 @@ public abstract class DAO {
 		}
 	}
 	protected void close() {		
+		/*
 		try {
 			
 			if(stmt!=null) {
@@ -76,7 +77,7 @@ public abstract class DAO {
 			}
 		} catch (SQLException e) {
 			System.out.print("Error Cerrando"+e.getMessage());
-		}
+		}*/
 		
 	}
 	
