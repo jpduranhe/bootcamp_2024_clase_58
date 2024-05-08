@@ -31,6 +31,7 @@
 			    
 			  </tbody>
 			</table>
+			<a href="/clase_58/persona-formulario" class="btn btn-success" > Volver al formulario</a>
 		</div>
 	</div>
 

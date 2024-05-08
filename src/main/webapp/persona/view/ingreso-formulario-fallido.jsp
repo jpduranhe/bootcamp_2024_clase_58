@@ -13,6 +13,7 @@
 		<div class="alert alert-danger" role="alert">
 		 	Error al Ingresar
 		</div>
+		<a href="/clase_58/persona-formulario" class="btn btn-success" > Volver al formulario</a>
 	</div>
 	
 	

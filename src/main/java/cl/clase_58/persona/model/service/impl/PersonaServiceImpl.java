@@ -19,8 +19,12 @@ public class PersonaServiceImpl implements PersonaService {
 	@Override
 	public boolean crearPersona(Persona persona) {
 		
-		if(persona != null && !persona.getNombre().isBlank() 
-				&& !persona.getApellidos().isBlank() && persona.getEdad()>0) {
+		if(persona != null 
+				&& persona.getNombre() !=null
+				&& persona.getApellidos() !=null 
+				&& !persona.getNombre().isBlank() 
+				&& !persona.getApellidos().isBlank() 
+				&& persona.getEdad()>0) {
 			
 			return personaDao.guardar(persona);
 		} else {
@@ -34,6 +38,20 @@ public class PersonaServiceImpl implements PersonaService {
 	@Override
 	public List<Persona> obtenerPersonas() {
 		return personaDao.getListado();
+	}
+
+	@Override
+	public boolean editarPersona(Persona persona) {
+		if(persona.getId()>0) {
+			personaDao.editar(persona);
+			return true;
+		}
+		return false;
+	}
+
+	@Override
+	public Persona getById(int id) {
+		return personaDao.obtenerPorId(id);
 	}
 
 }

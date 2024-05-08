@@ -13,6 +13,7 @@
 		<div class="alert alert-success" role="alert">
 		 	Persona Agregada Correctamente!!
 		</div>
+		<a href="/clase_58/persona-formulario" class="btn btn-success" > Volver al formulario</a>
 	</div>
 	
 	
